@@ -1,0 +1,37 @@
+[
+    {
+        "coords": [55.758354480999806, 37.606096878051744],
+        "address": "Some address 1",
+        "review": "Text review 1"
+    },
+    {
+        "coords": [55.76212939165674, 37.60558189392088],
+        "address": "Some address 2",
+        "review": "Text review 2"
+    },
+    {
+        "coords": [55.7606775463713, 37.599573745727525],
+        "address": "Some address 3",
+        "review": "Text review 3"
+    },
+    {
+        "coords": [55.762613328021914, 37.59974540710447],
+        "address": "Some address 4",
+        "review": "Text review 4"
+    },
+    {
+        "coords": [55.77509680112331, 37.641115798950175],
+        "address": "Some address 5",
+        "review": "Text review 5"
+    },
+    {
+        "coords": [55.7889303785291, 37.60506690979002],
+        "address": "Some address 6",
+        "review": "Text review 6"
+    },
+    {
+        "coords": [55.7739357171593, 37.69021095275878],
+        "address": "Some address 7",
+        "review": "Text review 7"
+    }
+]

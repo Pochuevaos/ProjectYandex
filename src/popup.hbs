@@ -1,0 +1,47 @@
+<div class="popup">
+    <div class="popup__header">
+        <i class="fas fa-map-marker-alt popup__geo"></i> $[properties.address]
+        <i class="fas fa-times popup__close"></i>
+    </div>
+    <div class="review">
+        <div class="popup__reviews-container">
+            <ul class="popup__reviews-list">
+                {% for item in properties.reviews %}
+                <li class="popup__reviews-item">
+                    <div class="popup__review-header">
+                        <div class="popup__review-name">$[item.name]</div>
+                    </div>
+                    <div class="popup__review-place">
+                        $[item.place]
+                    </div>
+                    <div class="popup__review-date">
+                        $[item.date]
+                    </div>
+                    <div class="popup__review-text">
+                        $[item.text]
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="popup__form">
+        <form action="" class="popup__form-container">
+            <img src="./img/shape.png" alt="">
+            <div class="rewiew__title" style="font-family: 'Fira Sans'">ваш отзыв</div>
+            <div class="popup__form-row">
+                <input type="text" placeholder="Ваше имя" style="font-family: 'Fira Sans'" id="review-name" class="popup__input" name="name">
+            </div>
+            <div class="popup__form-row">
+                <input type="text" placeholder="Укажите место" style="font-family: 'Fira Sans'" id="review-place" class="popup__input" name="place">
+            </div>
+            <div class="popup__form-row">
+                <textarea name="review" style="font-family: 'Fira Sans'" placeholder="Поделитесь впечатлениями" class="popup__input popup__input_text"
+                    id="review"></textarea>
+            </div>
+            <div class="popup__form-row">
+                <button class="add-review">Добавить</button>
+            </div>
+        </form>
+    </div>
+</div>
