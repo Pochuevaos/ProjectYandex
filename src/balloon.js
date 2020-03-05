@@ -16,6 +16,8 @@ const init = () => {
             let reviewArray = [];
 
             save.addEventListener('click',function (e) {
+
+                console.log('клик добавить');
                 e.preventDefault();
                 const name = document.getElementById('review-name');
                 const place = document.getElementById('review-place');
@@ -33,7 +35,7 @@ const init = () => {
                 localStorage.setItem(stringCoords, serialObj);
                 // var returnObj = JSON.parse(localStorage.getItem(stringCoords)); // парсинг обратно в объект
 
-                var myPlacemark = new ymaps.Placemark(coords, {
+                myPlacemark = new ymaps.Placemark(coords, {
                     address: result,
                     reviews: reviewArray
                 });
@@ -57,11 +59,17 @@ const init = () => {
         controls: ['zoomControl', 'fullscreenControl']
     }, { balloonLayout });
 
+    let myPlacemark;
     let stringCoords;
     let coords;
     let result;
 
     myMap.events.add('click', e => {
+        // в комментарии тк ломает работу
+        // if (myPlacemark) {
+        //     myPlacemark.geometry.setCoordinates(coords);
+        // } else {}
+        console.log('клик получить координаты');
         coords = e.get('coords');
         stringCoords = coords.join(', ');
 
@@ -83,6 +91,7 @@ const init = () => {
         });
     });
 
+    // метка для примера
     // var myPlacemark = new ymaps.Placemark([55.76, 37.64], {
     //     address: 'Some address point',
     //     reviews: [
